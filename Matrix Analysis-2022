@@ -1,0 +1,105 @@
+\documentclass[12pt]{article}
+
+% 中文支持
+\usepackage[UTF8, scheme=plain]{ctex}
+
+% 页边距
+\usepackage[a4paper,top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm]{geometry}
+
+% 数学环境
+\usepackage{amsmath, amssymb}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+% 行距
+\usepackage{setspace}
+\setstretch{1.3} % 1.3倍行距，更适合试卷阅读
+
+% 题号环境
+\usepackage{enumitem}
+\setlist[enumerate,1]{label=\textbf{\arabic*.}, leftmargin=2em, itemsep=1.5em}
+\setlist[enumerate,2]{label=(\arabic*), leftmargin=2em, itemsep=1em}
+
+% 页眉页脚
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{哈尔滨工业大学 · 矩阵分析}
+\rhead{2022 年秋季学期}
+\cfoot{\thepage}
+
+% 标题
+\title{\textbf{2022 年秋季学期矩阵分析试卷}}
+\author{哈尔滨工业大学}
+\date{}
+
+\begin{document}
+\maketitle
+\thispagestyle{fancy}
+
+\vspace{1em}
+
+% ---------- 第1页 ----------
+\begin{enumerate}
+    \item (30 分) 
+    \[
+    A = \begin{bmatrix} 
+    2 & 1 & 0 & 0 \\ 
+    -4 & -5 & 1 & 0 \\ 
+    -12 & -15 & 3 & 0 \\ 
+    60 & 48 & 0 & 3 
+    \end{bmatrix}
+    \]
+    \begin{enumerate}
+        \item 求: $A^7$、$\sin A$、$\det \left( \sum_{k=0}^{\infty} \frac{A^k}{4^k} \right)$；
+        \item 设 $V = \{ X \in \mathbb{R}^4 \mid A^2 X = 0 \}$、$W = \{ Y \mid AX = Y, X \in V \}$，求证 $V$、$W$ 是线性空间，并求 $V$、$W$ 的维数。
+    \end{enumerate}
+    
+    \vfill % 自动留白
+
+    \item (30 分) 
+    \[
+    A = \begin{bmatrix}1 & 1 \\ 1 & -1\end{bmatrix}, \quad
+    B = \begin{bmatrix}1 & 2 \\ 3 & 4\end{bmatrix}
+    \]
+    \begin{enumerate}
+        \item 求 $A$ 的奇异值；
+        \item 设 $V= \{ X \in \mathbb{R}^{2 \times 2} \mid X^T = X \}$，映射 $\tau(X) = AX + XA, \; X \in V$。求证 $\tau$ 是线性变换，并求 $\tau$ 的核空间与像空间的维数；
+        \item 设 $C = AX + XA - B$，求 $\operatorname{tr}(C^T C)$ 的最小值。
+    \end{enumerate}
+
+    \vfill % 自动留白
+\end{enumerate}
+
+\newpage
+% ---------- 第2页 ----------
+\begin{enumerate}
+    \setcounter{enumi}{2} % 继续编号
+
+    \item (20 分) 
+    \[
+    V = \{ f: \mathbb{N} \to \mathbb{R} \mid k = 0, 1, 2, \dots ;\ f(k+3) + f(k+2) = 5 f(k+1) + 5 f(k) \}
+    \]
+    \begin{enumerate}
+        \item 求证： $V$ 是线性空间；
+        \item 映射 $\langle \cdot, \cdot \rangle : V \times V \to \mathbb{R}$ 满足：
+        \[
+        \langle f, g \rangle = f(0)g(0) + f(1)g(1) + f(2)g(2) + f(3)g(3)
+        \]
+        求证：$\langle \cdot, \cdot \rangle$ 是 $V$ 上的实内积，并求一组 $V$ 的正交基。
+    \end{enumerate}
+
+    \vfill % 自动留白
+
+    \item (20 分) 判断下列命题并证明：
+    \begin{enumerate}
+        \item 已知 $A^2 = A$、$B^2 = B$、$AB = BA$。命题：若 $(A + cB)^2 = A + cB$，则 $c^3 = c$。
+        \item 已知方阵 $A$ 的谱半径小于 1。命题：存在方阵 $B$ 满足 $B$ 的谱半径小于 1，使得 $A + B = -AB$。
+        \item 已知 $A \in \mathbb{R}^{2 \times 2}$ 且 $\det(A) = 1$。命题：存在 $B$，满足 $\det(B) = 1$，使得 $AB = -BA$ 成立。
+        \item 已知 $A \neq 0$。命题：若存在唯一 $B$ 使得 $ABA = A$，则 $A$ 可逆。
+    \end{enumerate}
+
+    \vfill % 自动留白
+\end{enumerate}
+
+\end{document}
